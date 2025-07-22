@@ -76,8 +76,8 @@ class LCModel(nn.Module):
 
 # Create instances of the opimizer, loss, and neural network
 lcm = LCModel()
-lcm.to('cpu')
-opt = Adam(lcm.parameters(), lr=1e-3)
+lcm.to('cpu') # Change this if you're using a GPU
+opt = Adam(lcm.parameters(), lr=1e-3) 
 loss_func = nn.CrossEntropyLoss()
 
 # Training Loop
